@@ -27,9 +27,7 @@ def find_max_profit(prices):
   second_lowest_price=prices[0]
   current_lowest_price=prices[0]
   current_maximum_profit=0
-  # take a look at the list of prices
   for i in range(len(prices)):
-    # compare the current price with the lowest price
     if current_lowest_price>prices[i]:
       # update lowest price if it's smllaer
       second_lowest_price= current_lowest_price
@@ -44,7 +42,13 @@ def find_max_profit(prices):
     return current_lowest_price-second_lowest_price
   # return the max profit
   return current_maximum_profit
-
+# def find_max_profit(prices):
+#     max_profit = prices[1]-prices[0]
+#     for x in range(len(prices)-1):
+#         for y in range(x+1, len(prices)):
+#             if prices[y] - prices[x] > max_profit:
+#                 max_profit = prices[y] - prices[x]
+#     return max_profit
 
 
 if __name__ == '__main__':
