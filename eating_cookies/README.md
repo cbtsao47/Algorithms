@@ -1,5 +1,38 @@
 # Eating Cookies
 
+<!-- [n]
+
+1   0
+1   1
+2   2
+4   3
+7   4
+13  5
+24  6
+44  7
+81  8
+149 9
+274 10
+eatcookies(n)= eatcookies(n-1)+eatcookies(n-2)+eatcookies(n-3)
+c c c 
+1   n
+
+1 1  n+1
+2
+
+1 1 1  n   
+1 2     
+2 1
+3
+
+1 1 1 1 
+1 1 2 
+1 2 1
+1 3
+2 2
+3 1 
+4 -->
+
 Cookie Monster can eat either 0, 1, 2, or 3 cookies at a time. If he were given a jar of cookies with `n` cookies inside of it, how many ways could he eat all `n` cookies in the cookie jar? Implement a function `eating_cookies` that counts the number of possible ways Cookie Monster can eat all of the cookies in the jar. 
 
 For example, for a jar of cookies with `n = 3` (the jar has 3 cookies inside it), there are 4 possible ways for Cookie Monster to eat all the cookies inside it:

@@ -3,7 +3,23 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  # initialize batches made
+  batches =0
+  # check if we have enough ingredients
+  enough_ingredients=True
+  # make a batch as long as there are enough ingredients
+  while enough_ingredients:
+    # subtract recipe required amount from available ingredient amounts
+    for key in recipe:
+      if ingredients.get(key) == None or ingredients[key]-recipe[key]<0:
+        enough_ingredients=False
+      else:
+        ingredients[key]=ingredients[key]-recipe[key]
+    # increase batches
+    if enough_ingredients:
+      batches+=1
+    
+  return batches
 
 
 if __name__ == '__main__':
